@@ -1,5 +1,9 @@
 <head>
   <script type="module" src="https://googleapis.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 <body>
   <style>
@@ -24,6 +28,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     .faceImg {
@@ -31,7 +36,70 @@
       box-shadow: 0px 0px 20px 8px white;
       border-radius: 50px;
     }
+
+    .title {
+      font-size: 5vw;
+      font-family: 'Zen Dots', sans-serif;
+      color: white;
+      text-shadow: 0px 5px 10px white;
+    }
     /*END HEADER*/
+
+    /*START TABLE OF CONTENTS*/
+    .table-of-contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 3vh;
+    }
+
+    .games-link, .software-link, .websites-link {
+      text-decoration: none;
+    }
+
+    .games-button, .software-button, .websites-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 15vw;
+      height: 10vh;
+      border-radius: 15px;
+      border: 5px solid rgba(200, 200, 200, 200);
+      background-color: white;
+      box-shadow: 0 0 10px 0px white;
+    }
+
+    .games-button:hover, .software-button:hover, .websites-button:hover {
+      border-color: rgba(150, 150, 150, 200);
+      background-color: rgb(205, 205, 205);
+    }
+
+    .games-button-text, .software-button-text, .websites-button-text {
+      font-size: 2.5vw;
+      font-family: 'Space Mono', monospace;
+      font-weight: 600;
+      color: black;
+    }
+    /*END TABLE OF CONTENTS*/
+
+    /*START CONTENT*/
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 10vh;
+      padding: 10vh 20vw 0 20vw;
+    }
+
+    .games-title, .software-title, .websites-title {
+      font-family: 'Zen Dots', sans-serif;
+      font-size: 5vh;
+      color: white;
+      text-shadow: 0px 5px 10px white;
+    }
+    /*END CONTENT*/
 
     body {
       margin: 0;
@@ -44,5 +112,40 @@
 
   <div class = "header">
     <img src = "FacePicture.jpg" height = "auto" width = "auto" class = "faceImg">
-  </div>"
+    <p class = "title">Hunter Huelsmann Portfolio</p>
+  </div>
+
+  <div class = "table-of-contents">
+    <a class = "games-link" href = "#Games">
+      <div class = "games-button">
+        <p class = "games-button-text">Games</p>
+      </div>
+    </a>
+
+    <a class = "software-link" href = "#Software">
+      <div class = "software-button">
+        <p class = "software-button-text">Software</p>
+      </div>
+    </a>
+
+    <a class = "websites-link" href = "#Websites">
+      <div class = "websites-button">
+        <p class = "websites-button-text">Websites</p>
+      </div>
+    </a>
+  </div>
+
+  <div class = "content">
+    <div class = "games" id = "Games">
+      <p class = "games-title">Games</p>
+    </div>
+
+    <div class = "software" id = "Software">
+      <p class = "software-title">Software</p>
+    </div>
+
+    <div class = "websites" id = "Websites">
+      <p class = "websites-title">Websites</p>
+    </div>
+  </div>
 </body>
