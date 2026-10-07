@@ -117,11 +117,26 @@
 
     .portfolio-entry {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 5vh 0 5vh 0;
+      gap: 2vw;
+    }
+
+    .portfolio-entry-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       gap: 10vw;
+    }
+
+    .portfolio-entry-title {
+      font-family: 'Zen Dots', sans-serif;
+      color: white;
+      font-size: 3.5vh;
+      text-shadow: 0px 5px 10px white;
     }
 
     .portfolioImg {
@@ -194,21 +209,68 @@
     </a>
   </div>
 
+<!-- PORTFOLIO ENTRY FORMAT
+      <div class = "portfolio-entry">
+        <p class = "portfolio-entry-title"></p>
+
+        <div class = "portfolio-entry-container">
+          <img src = "" height = "auto" width = "auto" class = "portfolioImg">
+
+          <div class = "portfolio-entry-content">
+            <p class = "portfolio-text">
+              
+            </p>
+
+            <a href = "" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+              
+            </a>
+          </div>
+        </div>
+      </div>
+-->
+
   <div class = "content">
     <div class = "games" id = "Games">
       <p class = "games-title">Games</p>
 
+      <!--Long Shot-->
       <div class = "portfolio-entry">
-        <img src = "TheTowerOfHeckImg.png" height = "auto" width = "auto" class = "portfolioImg">
+        <p class = "portfolio-entry-title">Long Shot</p>
 
-        <div class = "portfolio-entry-content">
-          <p class = "portfolio-text">
-            This project is a 3D platformer that focuses on the difficulty of each level. This is the first project I developed and released publicly.
-            This game was made to fall under the "rage game" category of games.
-          </p>
-          <a href = "https://flipper401.itch.io/tower-of-heck" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
-            The Tower Of Heck itch.io Link
-          </a>
+        <div class = "portfolio-entry-container">
+          <img src = "LongShotImg.png" height = "auto" width = "auto" class = "portfolioImg">
+
+          <div class = "portfolio-entry-content">
+            <p class = "portfolio-text">
+              Long Shot was the first VR project I created and released with Unity. It interacts with SteamVR. It was published Oct. 3rd, 2021.
+              I learned the dos and don'ts of making a VR game. This project started my passion for developing games in the simulation and extended reality space.
+            </p>
+
+            <a href = "https://flipper401.itch.io/long-shot" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+              Long Shot itch.io link
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--Tower Of Heck-->
+      <div class = "portfolio-entry">
+        <p class = "portfolio-entry-title">The Tower Of Heck</p>
+
+        <div class = "portfolio-entry-container">
+          <img src = "TheTowerOfHeckImg.png" height = "auto" width = "auto" class = "portfolioImg">
+
+          <div class = "portfolio-entry-content">
+            <p class = "portfolio-text">
+              The Tower Of Heck is a 3D platformer that focuses on the difficulty of each level. This is the first project I developed and released publicly with Unity.
+              I gained my first experience with the game development workflow as a solo developer. I worked with a lot of physics math and design whith this project.
+              It was a great first step in my journey.
+            </p>
+
+            <a href = "https://flipper401.itch.io/tower-of-heck" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+              The Tower Of Heck itch.io Link
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -217,17 +279,22 @@
       <p class = "software-title">Software</p>
 
       <div class = "portfolio-entry">
-        <img src = "KinematicsCalculatorImg.png" height = "auto" width = "auto" class = "portfolioImg">
+        <p class = "portfolio-entry-title">2D Kinematics Calculator</p>
 
-        <div class = "portfolio-entry-content">
-          <p class = "portfolio-text">
-            This project was created for the Emerging Technologies scholarship at Full Sail University for the Game Development Bachlor's degree.
-            It was made using the kinematics projectile motion subject I had just learned in high school. The user will run the run.bat file to open console.
-            Then they will follow the prompts to enter the values they have. Once all of the values are entered, the calculator will give the missing values back to the user.
-          </p>
-          <a href = "https://github.com/hunter-huelsmann/2D-Kinematics-Calculator" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
-            2D Kinematics Calculator Github Link
-          </a>
+        <div class = "portfolio-entry-container">
+          <img src = "KinematicsCalculatorImg.png" height = "auto" width = "auto" class = "portfolioImg">
+
+          <div class = "portfolio-entry-content">
+            <p class = "portfolio-text">
+              This project was created for the Emerging Technologies scholarship at Full Sail University for the Game Development Bachlor's degree.
+              It was made using the kinematics projectile motion subject I had just learned in high school. The user will run the run.bat file to open console.
+              Then they will follow the prompts to enter the values they have. Once all of the values are entered, the calculator will give the missing values back to the user.
+            </p>
+            
+            <a href = "https://github.com/hunter-huelsmann/2D-Kinematics-Calculator" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+              2D Kinematics Calculator Github Link
+            </a>
+          </div>
         </div>
       </div>
     </div>
