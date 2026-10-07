@@ -101,11 +101,65 @@
       padding: 10vh 20vw 0 20vw;
     }
 
+    .software {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
     .games-title, .software-title, .websites-title {
       font-family: 'Zen Dots', sans-serif;
       font-size: 5vh;
       color: white;
       text-shadow: 0px 5px 10px white;
+    }
+
+    .portfolio-entry {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 5vh 0 5vh 0;
+      gap: 10vw;
+    }
+
+    .portfolioImg {
+      width: 35vw;
+      box-shadow: 0 0 10px 2px white;
+    }
+
+    .portfolio-entry-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 35vw;
+    }
+
+    .portfolio-text {
+      font-family: 'Space Mono', monospace;
+      color: white;
+      font-size: 1vw;
+    }
+
+    .portfolio-link {
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 1.5vw;
+      background-color: white;
+      color: black;
+      border-radius: 15px;
+      border: 5px solid rgba(200, 200, 200, 200);
+      display: flex;
+      text-align: center;
+      font-weight: 600;
+      padding: 1vh 1vw 1vh 1vw;
+    }
+
+    .portfolio-link:hover {
+      border-color: rgba(150, 150, 150, 200);
+      background-color: rgb(205, 205, 205);
     }
     /*END CONTENT*/
   </style>
@@ -142,10 +196,38 @@
   <div class = "content">
     <div class = "games" id = "Games">
       <p class = "games-title">Games</p>
+
+      <div class = "portfolio-entry">
+        <img src = "KinematicsCalculatorImg.png" height = "auto" width = "auto" class = "portfolioImg">
+
+        <div class = "portfolio-entry-content">
+          <p class = "portfolio-text">
+            
+          </p>
+          <a href = "" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+            2D Kinematics Calculator Github Link
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class = "software" id = "Software">
       <p class = "software-title">Software</p>
+
+      <div class = "portfolio-entry">
+        <img src = "KinematicsCalculatorImg.png" height = "auto" width = "auto" class = "portfolioImg">
+
+        <div class = "portfolio-entry-content">
+          <p class = "portfolio-text">
+            This project was created for the Emerging Technologies scholarship at Full Sail University for the Game Development Bachlor's degree.
+            It was made using the kinematics projectile motion subject I had just learned in high school. The user will run the run.bat file to open console.
+            Then they will follow the prompts to enter the values they have. Once all of the values are entered, the calculator will give the missing values back to the user.
+          </p>
+          <a href = "https://github.com/hunter-huelsmann/2D-Kinematics-Calculator" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+            2D Kinematics Calculator Github Link
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class = "websites" id = "Websites">
