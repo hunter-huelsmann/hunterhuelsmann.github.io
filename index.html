@@ -120,6 +120,9 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid white;
+      padding: 0 2vw 0 2vw;
     }
 
     .games-title, .software-title, .websites-title {
@@ -158,6 +161,11 @@
       box-shadow: 0 0 10px 2px white;
     }
 
+    .portfolio-media-list-item {
+      box-shadow: 0 0 10px 2px white;
+      width: 23vw;
+    }
+
     .portfolio-entry-content {
       display: flex;
       flex-direction: column;
@@ -191,13 +199,37 @@
       border-color: rgba(150, 150, 150, 200);
       background-color: rgb(205, 205, 205);
     }
+
+    .media-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .media-element {
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2vw;
+    }
+
+    .portImgArrowLink {
+      text-decoration: none;
+    }
+
+    .portfolioImgArrow {
+      width: 3vw;
+    }
     /*END CONTENT*/
   </style>
+
+  <script src = "PortfolioScripts.js" defer></script>
   
   <div class = "background">
     <div class = "background-overlay"></div>
     <div class = "backgroundImg">
-      <video src="GameBackground100Particles.mp4" muted autoplay loop style="object-fit:cover;"></video>
+      <video src="GameBackground50Particles.mp4" muted autoplay loop style="object-fit:cover;"></video>
     </div>
   </div>
 
@@ -219,7 +251,7 @@
       </div>
     </a>
 
-    <a class = "websites-link" href = "#Websites">
+    <a class = "websites-link" href = "#Websites" style = "display:none;">
       <div class = "websites-button">
         <p class = "websites-button-text">Websites</p>
       </div>
@@ -246,9 +278,80 @@
       </div>
 -->
 
+<!-- PORTFOLIO ENTRY WITH MEDIA LIST FORMAT
+      <div class = "portfolio-entry">
+        <p class = "portfolio-entry-title"></p>
+
+        <div class = "portfolio-entry-container">
+          <div class = "media-list">
+            <div class = "media-element" id = "">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('', '', event)"><img src = "" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <img src = "" height = "auto" width = "auto" class = "portfolioImg">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('', '', event)><img src = "" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+            </div>
+          </div>
+
+          <div class = "portfolio-entry-content">
+            <p class = "portfolio-text">
+              
+            </p>
+
+            <a href = "" target="_blank" rel="noopener noreferrer" class = "portfolio-link">
+              
+            </a>
+          </div>
+        </div>
+      </div>
+-->
+
   <div class = "content">
     <div class = "games" id = "Games">
       <p class = "games-title">Games</p>
+
+      <!-- 3DCC Graphics -->
+      <div class = "portfolio-entry">
+        <p class = "portfolio-entry-title">Graphics Project</p>
+
+        <div class = "portfolio-entry-container">
+          <div class = "media-list">
+            <div class = "media-element first-element" id = "GraphicsOne" style = "display:flex;">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsOne', 'GraphicsFive', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <video src = "3DCC_Bottle.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsOne', 'GraphicsTwo', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+            </div>
+
+            <div class = "media-element" id = "GraphicsTwo">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsTwo', 'GraphicsOne', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <video src = "3DCC_Fish.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsTwo', 'GraphicsThree', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+            </div>
+
+            <div class = "media-element" id = "GraphicsThree">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsThree', 'GraphicsTwo', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <video src = "3DCC_Cat.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsThree', 'GraphicsFour', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+            </div>
+
+            <div class = "media-element" id = "GraphicsFour">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFour', 'GraphicsThree', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <video src = "3DCC_LogoSpin.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFour', 'GraphicsFive', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+            </div>
+
+            <div class = "media-element" id = "GraphicsFive">
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFive', 'GraphicsFour', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <video src = "3DCC_Cube.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFive', 'GraphicsOne', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+            </div>
+          </div>
+
+          <div class = "portfolio-entry-content">
+            <p class = "portfolio-text">
+              This is a graphics project that uses vulkan to render models and HLSL for the shader language. I gained a great amount of experience with shaders and Vulkan to render out different reflections, lighting, and models.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <!--Long Shot-->
       <div class = "portfolio-entry">
@@ -316,7 +419,7 @@
       </div>
     </div>
 
-    <div class = "websites" id = "Websites">
+    <div class = "websites" id = "Websites" style = "display:none;">
       <p class = "websites-title">Websites</p>
     </div>
   </div>
