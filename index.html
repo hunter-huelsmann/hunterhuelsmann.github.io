@@ -17,10 +17,18 @@
 
     /*START BACKGROUND*/
     .background {
-        z-index: -1;
+        z-index: -2;
         position: fixed;
         width: 100vw;
         height: 100vh;
+    }
+
+    .background-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: -1;
     }
   
     .backgroundImg {
@@ -31,6 +39,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        z-index: -2;
+        position: fixed;
     }
     /*END BACKGROUND*/
 
@@ -185,8 +195,9 @@
   </style>
   
   <div class = "background">
+    <div class = "background-overlay"></div>
     <div class = "backgroundImg">
-      <video src="GameBackgroundTwo.mp4" muted autoplay loop style="height:100%;object-fit:cover;"></video>
+      <video src="GameBackground100Particles.mp4" muted autoplay loop style="object-fit:cover;"></video>
     </div>
   </div>
 
