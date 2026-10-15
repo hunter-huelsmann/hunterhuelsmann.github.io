@@ -13,6 +13,7 @@
 
     body {
       margin: 0;
+      background-color: black;
     }
 
     /*START BACKGROUND*/
@@ -72,10 +73,10 @@
     /*START TABLE OF CONTENTS*/
     .table-of-contents {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      row-gap: 3vh;
+      gap: 3vw;
     }
 
     .games-link, .software-link, .websites-link {
@@ -179,7 +180,7 @@
     .portfolio-text {
       font-family: 'Space Mono', monospace;
       color: white;
-      font-size: 1.75vw;
+      font-size: 1.5vw;
     }
 
     .portfolio-link {
@@ -239,7 +240,7 @@
   <div class = "background">
     <div class = "background-overlay"></div>
     <div class = "backgroundImg">
-      <video src="GameBackground50Particles.mp4" muted autoplay loop style="object-fit:cover;"></video>
+      <video src="GameBackground50Particles.mp4" type = "video/mp4" muted autoplay loop playsinline style="object-fit:cover;"></video>
     </div>
   </div>
 
@@ -295,9 +296,11 @@
         <div class = "portfolio-entry-container">
           <div class = "media-list">
             <div class = "media-element" id = "">
-              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('', '', event)"><img src = "" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
               <img src = "" height = "auto" width = "auto" class = "portfolioImg">
-              <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('', '', event)><img src = "" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              <div class = "arrow-container">
+                <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('', '', event)"><img src = "" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+                <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('', '', event)><img src = "" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
+              </div>
             </div>
           </div>
 
@@ -325,7 +328,7 @@
         <div class = "portfolio-entry-container">
           <div class = "media-list">
             <div class = "media-element first-element" id = "GraphicsOne" style = "display:flex;">
-              <video src = "3DCC_Bottle.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <video src = "3DCC_Bottle.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls playsinline></video>
               <div class = "arrow-container">
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsOne', 'GraphicsFive', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsOne', 'GraphicsTwo', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
@@ -333,7 +336,7 @@
             </div>
 
             <div class = "media-element" id = "GraphicsTwo">
-              <video src = "3DCC_Fish.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <video src = "3DCC_Fish.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls playsinline></video>
               <div class = "arrow-container">
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsTwo', 'GraphicsOne', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsTwo', 'GraphicsThree', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
@@ -341,7 +344,7 @@
             </div>
 
             <div class = "media-element" id = "GraphicsThree">
-              <video src = "3DCC_Cat.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <video src = "3DCC_Cat.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls playsinline></video>
               <div class = "arrow-container">
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsThree', 'GraphicsTwo', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsThree', 'GraphicsFour', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
@@ -349,7 +352,7 @@
             </div>
 
             <div class = "media-element" id = "GraphicsFour">
-              <video src = "3DCC_LogoSpin.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <video src = "3DCC_LogoSpin.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls playsinline></video>
               <div class = "arrow-container">
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFour', 'GraphicsThree', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFour', 'GraphicsFive', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
@@ -357,7 +360,7 @@
             </div>
 
             <div class = "media-element" id = "GraphicsFive">
-              <video src = "3DCC_Cube.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls></video>
+              <video src = "3DCC_Cube.mp4" height = "auto" width = "auto" class = "portfolio-media-list-item" autoplay loop muted controls playsinline></video>
               <div class = "arrow-container">
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFive', 'GraphicsFour', event);"><img src = "LeftArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
                 <a href = "#" class = "portImgArrowLink" onclick = "ChangeMediaSlot('GraphicsFive', 'GraphicsOne', event);"><img src = "RightArrow.png" height = "auto" width = "auto" class = "portfolioImgArrow"></a>
